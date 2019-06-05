@@ -1,24 +1,14 @@
-#Navneet Singh
-# Sample Java webapp with Maven configuration to deploy to Azure App Service
 
-The code in this repo is a very simple JSP web application with some additional Maven configuration that's ready to deploy into Azure App Service. To build the application from the command line and run it locally:
+# Code Quality Assurance
 
-```
-cd app-service-maven
-mvn package
-mvn tomcat7:run-war
-```
+## Introduction & Purpose
 
-## Deploy to Azure App Service
+Implemented and integrated a recipe app website using Java and Spring Boot as the backend. The main focus of the project was to write maintainable code using best backend practices like SOLID principles, design patterns, refactoring techniques, test driven development.
 
-Create a web app plan and web app in Azure App Serivce and configure the web app to use Tomcat and Java 8.
+## Continuous Integration
 
-Replace the placeholder values in the az-settings.xml file with the username, password, and FTP hostname in your App Service publishing profile. Then deploy to Azure App Service through Maven:
+Jenkins, Github and Azure as a medium for providing continuous integration. We created two branches on Github namely develop, test from production/master(default) branch and mapped Azure environment with these branches namely dev environment, test environment and production environment. Further we mapped the environment with Jenkins. We had three setups on Jenkins such that whenever there is a change in develop branch of the project, Jenkins would pick up the change and run it by checking the unit test cases against the code. If everything was successful, Jenkins deploys the application to Azure. 
 
-```
-mvn install -s az-settings.xml
-```
+## Link
 
-# Contributing
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+The complete report can be accessed here : https://github.com/NavneetPrakashSingh/code-quality-assurance/blob/master/Group3_Report.pdf
